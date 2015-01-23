@@ -48,7 +48,7 @@ class FormUpload
             if(!$fileName){
                 $fileName = rand(1000,9999).rand(1000,9999).rand(1000,9999);
             }
-            $line =sprintf("%s\nContent-Disposition: name=\"%s\"; filename=\"%s\"\nContent-Type: %s\n\n%s\n",
+            $line =sprintf("%s\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\nContent-Type: %s\n\n%s\n",
                 $this->boundary,
                 $name,
                 $fileName,
